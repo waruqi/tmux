@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# create plugins directory
+if [ ! -d ~/.tmux/plugins ]; then
+    mkdir -p ~/.tmux/plugins
+fi
+
+# install tmux plugin manager
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm --depth 1
+fi
+
+# install tmux.conf
+cp tmux.conf ~/.tmux.conf
